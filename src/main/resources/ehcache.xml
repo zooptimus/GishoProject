@@ -1,0 +1,71 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+	updateCheck="true"
+	monitoring="autodetect" 
+	dynamicConfig="true">
+
+	<diskStore path="java.io.tmpdir" />
+	
+	<cache name="searchCache" 
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+        <cache name="functionCache" 
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+        <cache name="titleCache" 
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+        <cache name="montantCache" 
+		maxEntriesLocalHeap="100000"
+		maxEntriesLocalDisk="10000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="200"
+		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+       <!-- <cache name="comptesCache" 
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+        
+        <cache name="maxanneeCache" 
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="30000" timeToLiveSeconds="60000"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>-->
+
+</ehcache>

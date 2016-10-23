@@ -1,0 +1,34 @@
+server:
+    port: 8080
+    contextPath: /GishoMS
+        
+security:
+    oauth2:
+        resource:
+            jwt:
+                # Tells the JWT framework to fetch the public key from the authorization server during startup
+                # Note: The authorization server needs to be running...
+                key-uri: "http://localhost:8081/GishoMSAuthService/oauth/token_key"
+                
+
+spring:
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: true
+    datasource:
+        url: jdbc:postgresql://localhost:5432/Gisho
+        name:
+        username: postgres
+        password: super
+    social:
+        facebook:
+            appId: 548395332022264
+            appSecret: f5541cf2c909831b8e2b21c017eba470
+
+local:
+    cookieName: gisho_cookie
+    encryption:
+        password: iOZ!YXed!VFxxsFMJkJqv3itM6xdfO4*Jz8m8eNW
+        hexSalt: 6c0744940b5c369c

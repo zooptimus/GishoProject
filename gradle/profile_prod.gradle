@@ -1,0 +1,11 @@
+apply plugin: 'spring-boot'
+
+def profiles = 'prod'
+bootRun {
+    args = ["--spring.profiles.active=" + profiles]
+}
+task setProdProperties(dependsOn: bootRun) << {
+    doFirst {
+        System.setProperty('spring.profiles.active', profiles)
+    }
+}
